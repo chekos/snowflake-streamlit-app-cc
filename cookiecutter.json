@@ -1,0 +1,13 @@
+{
+    "app_name": "my streamlit app",
+    "app_description": "My awesome app",
+    "warehouse_name": "mywarehouse",
+    "stage_name": "@streamlit_stage",
+    "hyphenated": "{{ cookiecutter.app_name.lower().replace(' ', '-') }}",
+    "__app_slug": "{{ cookiecutter.hyphenated.replace('-', '_') }}",
+    "database": "database_name",
+    "schema": "schema_name",
+    "multi_page_app": [false, true],
+    "snowflake_account": "xyz12345",
+    "snowflake_user": "user"
+}

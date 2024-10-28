@@ -1,0 +1,18 @@
+definition_version: 2
+entities:
+  {{ cookiecutter.__app_slug}}:
+    type: streamlit
+    identifier: 
+      name: {{ cookiecutter.hyphenated }}
+      database: {{ cookiecutter.database }}
+      schema: {{ cookiecutter.schema }}
+    stage: {{ cookiecutter.stage_name }}
+    query_warehouse: {{ cookiecutter.warehouse_name }}
+    main_file: app.py
+    {% if cookiecutter.multi_page_app -%}
+    pages_dir: pages/
+    {% endif -%}
+    artifacts:
+      - utils/helpers.py
+      - utils/data.py
+      - environment.yml

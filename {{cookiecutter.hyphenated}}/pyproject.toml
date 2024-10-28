@@ -1,0 +1,27 @@
+[project]
+name = "{{ cookiecutter.hyphenated }}"
+version = "0.1.0"
+description = "{{ cookiecutter.app_description }}"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pre-commit>=3.5.0",
+    "snowflake-snowpark-python>=1.22.1",
+    "streamlit==1.35.0",
+]
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
